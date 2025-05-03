@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import ProductCard from '../components/ProductCard';
+import { useQuote } from '../context/useQuote';
 
 const products = {
   'Home Office': [
@@ -59,6 +60,7 @@ const products = {
 
 const ProductsPage = () => {
   const { category } = useParams();
+  const { updateLastVisitedCategory } = useQuote();
   
   // Convert URL format (home-office) to category format (Home Office)
   const getCategoryFromUrl = (urlCategory) => {
@@ -71,6 +73,10 @@ const ProductsPage = () => {
 
   const normalizedCategory = getCategoryFromUrl(category);
   
+  useEffect(() => {
+    updateLastVisitedCategory(category || '');
+  }, [category, updateLastVisitedCategory]);
+
   // Get products based on category or all products if no category is specified
   const getDisplayProducts = () => {
     if (!category) {

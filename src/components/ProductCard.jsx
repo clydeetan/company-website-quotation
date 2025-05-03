@@ -20,10 +20,7 @@ const ProductCard = ({ product }) => {
         <p className="text-gray-600 mb-4">
           {product.description}
         </p>
-        <div className="flex justify-between items-center">
-          <span className="text-2xl font-bold text-blue-600">
-            ${product.price}
-          </span>
+        <div className="flex justify-end">
           <button
             onClick={() => addToQuote(product)}
             className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-300 flex items-center gap-2"

@@ -3,6 +3,7 @@ import { QuoteContext } from './quoteContextDef';
 
 export const QuoteProvider = ({ children }) => {
   const [quoteItems, setQuoteItems] = useState([]);
+  const [lastVisitedCategory, setLastVisitedCategory] = useState(null);
 
   const addToQuote = (product) => {
     setQuoteItems(prev => {
@@ -37,12 +38,18 @@ export const QuoteProvider = ({ children }) => {
     setQuoteItems([]);
   };
 
+  const updateLastVisitedCategory = (category) => {
+    setLastVisitedCategory(category);
+  };
+
   const value = {
     quoteItems,
     addToQuote,
     removeFromQuote,
     updateQuantity,
     clearQuote,
+    lastVisitedCategory,
+    updateLastVisitedCategory,
     totalItems: quoteItems.reduce((sum, item) => sum + item.quantity, 0)
   };
 
