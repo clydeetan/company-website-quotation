@@ -40,7 +40,7 @@ const About = () => {
           <div className="flex-1">
             <div className="relative">
               <img
-                src="/about-image.jpg"
+                src="/company-website-quotation/about-image.jpg"
                 alt="Our workspace"
                 className="rounded-lg shadow-xl w-full max-w-lg mx-auto"
               />

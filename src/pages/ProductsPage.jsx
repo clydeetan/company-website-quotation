@@ -10,7 +10,7 @@ const products = {
       title: 'Modern Desk Lamp',
       description: 'Sleek and minimalist desk lamp with adjustable brightness.',
       price: 79.99,
-      image: '/products/desk-lamp.jpg',
+      image: '/company-website-quotation/products/desk-lamp.jpg',
       category: 'Home Office'
     },
     {
@@ -18,7 +18,7 @@ const products = {
       title: 'Ergonomic Chair',
       description: 'Premium office chair designed for comfort and proper posture.',
       price: 299.99,
-      image: '/products/chair.jpg',
+      image: '/company-website-quotation/products/chair.jpg',
       category: 'Home Office'
     },
     {
@@ -26,7 +26,7 @@ const products = {
       title: 'Wireless Charger Pad',
       description: 'Fast-charging pad with elegant minimalist design.',
       price: 39.99,
-      image: '/products/charger.jpg',
+      image: '/company-website-quotation/products/charger.jpg',
       category: 'Home Office'
     },
     {
@@ -34,7 +34,7 @@ const products = {
       title: 'Wooden Desk Organizer',
       description: 'Handcrafted desk organizer with multiple compartments.',
       price: 59.99,
-      image: '/products/organizer.jpg',
+      image: '/company-website-quotation/products/organizer.jpg',
       category: 'Home Office'
     }
   ],
@@ -44,7 +44,7 @@ const products = {
       title: 'Smart Storage Cabinet',
       description: 'Versatile storage solution with modern design.',
       price: 449.99,
-      image: '/products/cabinet.jpg',
+      image: '/company-website-quotation/products/cabinet.jpg',
       category: 'House Furniture'
     },
     {
@@ -52,7 +52,7 @@ const products = {
       title: 'Air Purifier',
       description: 'Smart air purifier with HEPA filter and air quality sensor.',
       price: 199.99,
-      image: '/products/purifier.jpg',
+      image: '/company-website-quotation/products/purifier.jpg',
       category: 'House Furniture'
     }
   ]

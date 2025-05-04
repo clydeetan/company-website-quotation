@@ -6,7 +6,7 @@ const Hero = () => {
       id="home" 
       className="relative h-screen flex items-center justify-center bg-cover bg-center bg-no-repeat"
       style={{
-        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/hero-bg.jpg')"
+        backgroundImage: "linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('/company-website-quotation/hero-bg.jpg')"
       }}
     >
       <div className="container mx-auto px-4 text-center text-white">
