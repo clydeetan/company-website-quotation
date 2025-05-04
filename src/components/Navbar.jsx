@@ -11,6 +11,9 @@ const Navbar = () => {
   const location = useLocation();
 
   const isActive = (path) => {
+    if (path === '/products') {
+      return location.pathname.startsWith('/products') ? 'text-blue-900 font-bold' : 'text-gray-600';
+    }
     return location.pathname === path ? 'text-blue-900 font-bold' : 'text-gray-600';
   };
 
