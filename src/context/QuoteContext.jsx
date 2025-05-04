@@ -5,17 +5,26 @@ export const QuoteProvider = ({ children }) => {
   const [quoteItems, setQuoteItems] = useState([]);
   const [lastVisitedCategory, setLastVisitedCategory] = useState(null);
 
-  const addToQuote = (product) => {
+  const isInQuote = (productId) => {
+    return quoteItems.some(item => item.id === productId);
+  };
+
+  const getQuantityInQuote = (productId) => {
+    const item = quoteItems.find(item => item.id === productId);
+    return item ? item.quantity : 0;
+  };
+
+  const addToQuote = (product, quantity = 1) => {
     setQuoteItems(prev => {
       const existingItem = prev.find(item => item.id === product.id);
       if (existingItem) {
         return prev.map(item =>
           item.id === product.id
-            ? { ...item, quantity: item.quantity + 1 }
+            ? { ...item, quantity: item.quantity + quantity }
             : item
         );
       }
-      return [...prev, { ...product, quantity: 1 }];
+      return [...prev, { ...product, quantity }];
     });
   };
 
@@ -28,7 +37,7 @@ export const QuoteProvider = ({ children }) => {
     setQuoteItems(prev =>
       prev.map(item =>
         item.id === productId
-          ? { ...item, quantity: quantity }
+          ? { ...item, quantity }
           : item
       )
     );
@@ -50,7 +59,9 @@ export const QuoteProvider = ({ children }) => {
     clearQuote,
     lastVisitedCategory,
     updateLastVisitedCategory,
-    totalItems: quoteItems.reduce((sum, item) => sum + item.quantity, 0)
+    totalItems: quoteItems.reduce((sum, item) => sum + item.quantity, 0),
+    isInQuote,
+    getQuantityInQuote
   };
 
   return (
